@@ -6,6 +6,7 @@
 	"type": "module",
 	"exports": "./index.mjs",
 	"scripts": {
+		"preversion": "npm run test",
 		"test": "node --test --test-reporter=./index.mjs"
 	},
 	"engines": {
