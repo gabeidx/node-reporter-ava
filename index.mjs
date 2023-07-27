@@ -1,13 +1,13 @@
+import { red, green } from "kleur/colors";
+
 export default async function * reporter(source) {
 	for await (const event of source) {
 		switch (event.type) {
 			case 'test:pass':
-				// TODO: add tty color support
-				yield `✔ ${event.data.name}\n`;
+				yield `${green(`✔`)} ${event.data.name}\n`;
 				break;
 			case 'test:fail':
-				// TODO: add tty color support
-				yield `✘ [fail] ${event.data.name}\n`;
+				yield `${red(`✘ [fail]`)} ${event.data.name}\n`;
 				break;
 			case 'test:plan':
 				// TODO: implement test plan output
