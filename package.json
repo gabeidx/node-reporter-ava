@@ -1,8 +1,10 @@
 {
+	"$schema": "https://json.schemastore.org/package",
 	"name": "node-reporter-ava",
 	"version": "0.0.0",
 	"license": "MIT",
 	"type": "module",
+	"exports": "./index.mjs",
 	"scripts": {
 		"test": "node --test --test-reporter=./index.mjs"
 	},
