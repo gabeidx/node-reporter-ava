@@ -1,6 +1,6 @@
 <div align="center">
 	<h1 align="center">node-reporter-ava</h1>
-	<h5>A custom test reporter for Node's built-in test runner, inspired by Ava</h5>
+	<h5>A custom test reporter for Node's built-in test runner, inspired by <a href="https://github.com/avajs/ava">Ava</a></h5>
 </div>
 
 <br/>
