@@ -5,6 +5,8 @@
 
 <br/>
 
+![](output.png)
+
 ## Installation
 
 ```bash
