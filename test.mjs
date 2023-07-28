@@ -9,6 +9,7 @@ test("pass", () => {
 		"./fixtures/pass.mjs",
 	], { env: {} });
 
+	assert(child.stdout?.toString().split("\n")?.[0]?.startsWith("  "));
 	assert.equal(child.status, 0);
 });
 
@@ -19,5 +20,6 @@ test("fail", () => {
 		"./fixtures/fail.mjs",
 	], { env: {} });
 
+	assert(child.stdout?.toString().split("\n")?.[0]?.startsWith("  "));
 	assert.equal(child.status, 1);
 });
