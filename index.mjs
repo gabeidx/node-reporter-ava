@@ -1,13 +1,17 @@
-import { red, green } from "kleur/colors";
+import { red, green, gray, dim } from "kleur/colors";
 
 export default async function * reporter(source) {
 	for await (const event of source) {
-		switch (event.type) {
+		const { type, data: { name, details } } = event;
+
+		switch (type) {
 			case 'test:pass':
-				yield `${green(`✔`)} ${event.data.name}\n`;
+				// TODO: format duration to seconds/ms
+				yield `${green(`✔`)} ${name} ${dim(gray(`(${details.duration_ms.toFixed(3)}ms)`))}\n`;
 				break;
 			case 'test:fail':
-				yield `${red(`✘ [fail]`)} ${event.data.name}\n`;
+				// TODO: format duration to seconds/ms
+				yield `${red(`✘ [fail]`)} ${name} ${dim(gray(`(${details.duration_ms.toFixed(3)}ms)`))}\n`;
 				break;
 			case 'test:plan':
 				// TODO: implement test plan output
