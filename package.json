@@ -4,10 +4,10 @@
 	"version": "0.2.1",
 	"license": "MIT",
 	"type": "module",
-	"exports": "./index.mjs",
+	"exports": "./index.js",
 	"scripts": {
 		"preversion": "npm run test",
-		"test": "node --test --test-reporter=./index.mjs"
+		"test": "node --test --test-reporter=./index.js"
 	},
 	"dependencies": {
 		"kleur": "4.1.5"
